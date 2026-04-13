@@ -1,0 +1,498 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 700vh;
+}
+
+/* intro bg start */
+.hello {
+    width: 100%;
+    height: 50rem;
+    background: linear-gradient(-45deg, #971dd4, #3f41b7, #ee397e, #b56565);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.hello h1,.hello p{scale: 1.2;}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* intro bg end */
+
+/* salulutation start  */
+.salutation {
+    color: #eee;
+    padding-top: 30px;
+    font-family: "Coiny", cursive;
+    text-align: center;
+    font-size: 70px;
+    -webkit-animation: bounce 0.4s ease infinite alternate;
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        text-shadow:
+            0 5px 0 #ccc,
+            0 2px 3px rgba(0, 0, 0, 1);
+    }
+    100% {
+        transform: translateY(-20px);
+        text-shadow:
+            0 50px 0 #black,
+            0 0px 20px rgba(0, 0, 0, 0.8);
+    }
+}
+/* salutation end  */
+
+/* typewriter effect start */
+.name {
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 0.15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0.15em; /* Adjust as needed */
+    animation:
+        typing 5s steps(28, end),
+        blink-caret 1.2s step-end infinite;
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 40%;
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: rgb(255, 110, 48);
+    }
+}
+/* typewriter effect end  */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+/* icon start */
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+    height: 120px;
+    width: 100%;
+    padding-top: 40px;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+}
+
+.wrapper .icon {
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+    background: #023981;
+    color: #fff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+    background: #1da1f2;
+    color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+    background: #e4405f;
+    color: #fff;
+}
+
+.wrapper .github {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper .github a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+    background: #000000;
+    color: #fff;
+}
+/* icon end */
+
+/* button start */
+.button {
+    cursor: pointer;
+    position: relative;
+    padding: 10px 24px;
+    font-size: 18px;
+    color: rgb(85, 76, 164);
+    border: 2px solid rgb(99, 117, 218);
+    border-radius: 34px;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    overflow: hidden;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: rgb(65, 91, 206);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.button:hover::before {
+    scale: 5;
+}
+
+.button:hover {
+    color: #212121;
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgba(193, 163, 98, 0.4);
+}
+
+.button:active {
+    scale: 1;
+}
+/* button end */
+
+/* main start */
+#introduction {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    top: 5rem;
+}
+
+#introduction a {
+    text-decoration: none;
+    color: rgb(145, 156, 79);
+}
+.profile-pic {
+    width: 20rem;
+    height: 29rem;
+    z-index: 2;
+}
+.profile-pic {
+    --c: #ccc9c9; /* the main color */
+    --b: 5px; /* thickness of the border */
+    --o: 23px; /* control the offset */
+
+    width: 20rem; /* the image size */
+    --_p: calc(2 * var(--o) + var(--b));
+    padding: var(--_p) var(--_p) 0 0;
+    outline: var(--b) solid var(--c);
+    outline-offset: calc(var(--o) - var(--_p));
+    transition: 0.4s;
+    cursor: pointer;
+}
+.profile-pic:hover {
+    padding: calc(var(--_p) / 2);
+}
+/* main end */
+
+/* timeline start */
+.main-timeline-2 {
+    position: relative;
+}
+
+/* The actual timeline (the vertical ruler) */
+.main-timeline-2::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    background-color: #26c6da;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container around content */
+.timeline-2 {
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* The circles on the timeline */
+.timeline-2::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -11px;
+    background-color: #26c6da;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.left-2 {
+    padding: 0px 40px 20px 0px;
+    left: 0;
+}
+
+/* Place the container to the right */
+.right-2 {
+    padding: 0px 0px 20px 40px;
+    left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left-2::before {
+    content: " ";
+    position: absolute;
+    top: 18px;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right-2::before {
+    content: " ";
+    position: absolute;
+    top: 18px;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right-2::after {
+    left: -14px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .main-timeline-2::after {
+        left: 31px;
+    }
+
+    /* Full-width containers */
+    .timeline-2 {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    /* Make sure that all arrows are pointing leftwards */
+    .timeline-2::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    /* Make sure all circles are at the same spot */
+    .left-2::after,
+    .right-2::after {
+        left: 18px;
+    }
+
+    .left-2::before {
+        right: auto;
+    }
+
+    /* Make all right containers behave like the left ones */
+    .right-2 {
+        left: 0%;
+    }
+}
+/* timeline end */
+
+/* tools start */
+.tools {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: auto;
+    box-sizing: border-box;
+}
+
+
+.app {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid rgb(130, 148, 130);
+    background-color: rgb(237, 85, 43);
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    min-width: 80px;
+    aspect-ratio: 1;
+    border-radius: 4rem;
+}
+.app h1 {
+    color: rgb(85, 34, 34);
+    text-align: center;
+    font-size: 2rem;
+}
+.html { grid-column: 1; grid-row: 1; }
+.css { grid-column: 3; grid-row: 1; }
+.bootstrap { grid-column: 5; grid-row: 1; }
+.canva { grid-column: 2; grid-row: 2; }
+.blender { grid-column: 4; grid-row: 2; }
+/* tools end */
+
+/* project start */
+#project {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    width: 100%;
+    padding: 2rem;
+}
+.proj-1 {
+    width: 100%;
+    max-width: 25rem;
+    cursor: pointer;
+    scale: 0.2;
+    rotate: 235deg;
+    transition: all 1s ease-in-out 0s;
+}
+.proj-1:hover {
+    scale: 1.1;
+    rotate: 360deg;
+}
+.proj-2 {
+    width: 100%;
+    max-width: 25rem;
+    cursor: pointer;
+    scale: 0.2;
+    rotate: 305deg;
+    transition: all 1s ease-in-out 0s;
+}
+.proj-2:hover {
+    scale: 1.1;
+    rotate: 360deg;
+}
+.proj-3 {
+    width: 100%;
+    max-width: 25rem;
+    cursor: pointer;
+    scale: 0.2;
+    rotate: 145deg;
+    transition: all 1s ease-in-out 0s;
+}
+.proj-3:hover {
+    scale: 1.1;
+    rotate: 360deg;
+}
+.proj-4 {
+    width: 100%;
+    max-width: 25rem;
+    cursor: pointer;
+    scale: 0.2;
+    rotate: 55deg;
+    transition: all 1s ease-in-out 0s;
+}
+.proj-4:hover {
+    scale: 1.1;
+    rotate: 360deg;
+}
+/* project end */

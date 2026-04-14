@@ -247,10 +247,7 @@ iframe {
     opacity: 0.89;
     transition: 0.3s ease-in-out;
 }
-iframe:hover {
-    opacity: 1;
-    transform: scale(1.1);
-}
+      
 .location {
     height: 40rem !important;
     padding: 0 !important;

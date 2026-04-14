@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    height: 700vh;
+    height: auto;
 }
 
 /* intro bg start */
@@ -18,7 +18,10 @@ body {
     justify-content: center;
     text-align: center;
 }
-.hello h1,.hello p{scale: 1.2;}
+.hello h1,
+.hello p {
+    scale: 1.2;
+}
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
@@ -34,7 +37,7 @@ body {
 
 /* salulutation start  */
 .salutation {
-    color: #eee;
+    color: #ffffff;
     padding-top: 30px;
     font-family: "Coiny", cursive;
     text-align: center;
@@ -59,7 +62,7 @@ body {
 
 /* typewriter effect start */
 .name {
-    color: #fff;
+    color: #ffffff;
     font-family: monospace;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: 0.15em solid orange; /* The typwriter cursor */
@@ -75,7 +78,7 @@ body {
         width: 0;
     }
     to {
-        width: 40%;
+        width: 20ch;
     }
 }
 
@@ -261,6 +264,12 @@ body {
     text-decoration: none;
     color: rgb(145, 156, 79);
 }
+.intro-text {
+    color: rgb(187, 86, 39);
+    font-family: "Merriweather", serif;
+    line-height: 1.6;
+    font-size: clamp(14px, 2vw, 20px);
+}
 .profile-pic {
     width: 20rem;
     height: 29rem;
@@ -402,47 +411,39 @@ body {
 /* timeline end */
 
 /* tools start */
-.tools {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1rem;
-    padding: 2rem;
-    width: 100%;
-    max-width: 100vw;
-    overflow-x: auto;
-    box-sizing: border-box;
-}
 
 
 .app {
     display: flex;
     flex-direction: column;
     border: 5px solid rgb(130, 148, 130);
-    background-color: rgb(237, 85, 43);
+    background-color: rgb(44, 71, 171);
     padding: 1rem;
     justify-content: center;
     align-items: center;
-    min-width: 80px;
     aspect-ratio: 1;
     border-radius: 4rem;
+    height: 20rem;
+    width: 20rem;
+     backdrop-filter: blur(10px);
+}
+.app svg {
+    height: 15rem;
+    width: 15rem;
 }
 .app h1 {
-    color: rgb(85, 34, 34);
+    color: rgb(189, 197, 71);
     text-align: center;
     font-size: 2rem;
 }
-.html { grid-column: 1; grid-row: 1; }
-.css { grid-column: 3; grid-row: 1; }
-.bootstrap { grid-column: 5; grid-row: 1; }
-.canva { grid-column: 2; grid-row: 2; }
-.blender { grid-column: 4; grid-row: 2; }
+
 /* tools end */
 
 /* project start */
 #project {
     display: grid;
     position: relative;
-    grid-template-columns: repeat(4, 1fr);
+  
     gap: 1rem;
     width: 100%;
     padding: 2rem;
@@ -456,7 +457,7 @@ body {
     transition: all 1s ease-in-out 0s;
 }
 .proj-1:hover {
-    scale: 1.1;
+    scale: 1.2;
     rotate: 360deg;
 }
 .proj-2 {
@@ -468,7 +469,7 @@ body {
     transition: all 1s ease-in-out 0s;
 }
 .proj-2:hover {
-    scale: 1.1;
+    scale: 1.2;
     rotate: 360deg;
 }
 .proj-3 {
@@ -480,7 +481,7 @@ body {
     transition: all 1s ease-in-out 0s;
 }
 .proj-3:hover {
-    scale: 1.1;
+    scale: 1.2;
     rotate: 360deg;
 }
 .proj-4 {
@@ -492,7 +493,7 @@ body {
     transition: all 1s ease-in-out 0s;
 }
 .proj-4:hover {
-    scale: 1.1;
+    scale: 1.4;
     rotate: 360deg;
 }
 /* project end */

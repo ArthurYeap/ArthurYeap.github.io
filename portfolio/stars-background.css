@@ -1,6 +1,6 @@
 /* From Uiverse.io by jaykdoe */
 .starry-background {
-    height: 700vh;
+    height: auto;
     width: 100%;
     position: relative;
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);

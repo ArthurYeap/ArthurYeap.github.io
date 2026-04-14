@@ -265,7 +265,7 @@ body {
     color: rgb(145, 156, 79);
 }
 .intro-text {
-    color: rgb(187, 86, 39);
+    color: rgb(245, 112, 50);
     font-family: "Merriweather", serif;
     line-height: 1.6;
     font-size: clamp(14px, 2vw, 20px);
